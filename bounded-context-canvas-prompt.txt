@@ -1,0 +1,460 @@
+Given are driven design domain storytelling diagrams that have been translated into a json representation
+The elements in the array in the top level "dst" property represent a visual item on the diagram
+Each element has a type property that identifies what visual item that element represents on the diagram and is indicated by the property '"type": "$TYPE'
+Domain storytelling activity elements are characterized by elements with type: domainStory:activity
+Domain storytelling activity elements also have a name property that is the predicate or preposition of the activity
+Domain storytelling activity elements also have an id property that uniquely identifies the activity
+Domain storytelling activity elements also have a source property that is the identity of the work object or actor the activity is sourced from
+Domain storytelling activity elements also have a target property that is the identity of the work object or actor the activity is targeted to
+Domain storytelling activity elements also can have a number property that orders the activities in the story from first (lowest number) to last (highest number)
+Domain storytelling activity elements that do not have a number are prepositions that relate the work objects of an activity to another actor that receives that work item
+Domain storytelling work object elements are characterized by elements with type: domainStory:workObject$description
+The description part of the work object elements type further characterize the type of the work object
+Domain storytelling work object elements also have a name property that is the specific name of the work object
+Domain storytelling work object elements also have an id property that uniquely identifies the work object
+Domain storytelling actor elements are characterized by elements with type: domainStory:actor$description
+The description part of the actor elements type further characterize the type of the actor
+Domain storytelling actor elements also have a name property that is the specific name of the actor
+Domain storytelling actor elements also have an id property that uniquely identifies the actor
+Domain storytelling text annotation elements are characterized by elements with type: domainStory:textAnnotation
+Domain storytelling text annotation elements also have a text property that contains the text of the annotation
+Domain storytelling text annotation elements also have an id property that uniquely identifies the text annotation
+Domain storytelling text annotation elements are connected to other elements by elements with type: domainStory:connection
+Domain storytelling connection elements also have an id property that uniquely identifies the connection
+Domain storytelling connection elements also have a source property that is the identity of the element the text annotation annotates
+Domain storytelling connection elements also have a target property that is the identity of the text annotation element providing the annotation
+
+{
+  "dst": [
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_7259",
+      "source": "shape_9441",
+      "target": "shape_9084"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_9084",
+      "text": "venue, address",
+      "number": 30
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "end of season tournament bracket",
+      "id": "shape_4418"
+    },
+    {
+      "type": "domainStory:workObjectView-List",
+      "name": "league standings",
+      "id": "shape_4763"
+    },
+    {
+      "type": "domainStory:workObjectHow-To-Reg",
+      "name": "match results",
+      "id": "shape_4587"
+    },
+    {
+      "type": "domainStory:workObjectAlarm",
+      "name": "registration deadline",
+      "id": "shape_6677"
+    },
+    {
+      "type": "domainStory:workObjectGrid",
+      "name": "match",
+      "id": "shape_0349"
+    },
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_2913",
+      "source": "shape_4919",
+      "target": "shape_6736"
+    },
+    {
+      "type": "domainStory:workObjectPlace",
+      "name": "venue",
+      "id": "shape_4284"
+    },
+    {
+      "type": "domainStory:actorPerson",
+      "name": "venue assistant",
+      "id": "shape_6678"
+    },
+    {
+      "type": "domainStory:workObjectView-List",
+      "name": "schedule",
+      "id": "shape_1426"
+    },
+    {
+      "type": "domainStory:workObjectCalendar",
+      "name": "schedule",
+      "id": "shape_5717"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "Registrations",
+      "id": "shape_0372"
+    },
+    {
+      "type": "domainStory:actorGroup",
+      "name": "teams",
+      "id": "shape_2014"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "season",
+      "id": "shape_4111"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "team",
+      "id": "shape_3982"
+    },
+    {
+      "type": "domainStory:actorGroup",
+      "name": "players",
+      "id": "shape_7710"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "account",
+      "id": "shape_3089"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "season",
+      "id": "shape_4919"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "league",
+      "id": "shape_9441"
+    },
+    {
+      "type": "domainStory:actorSystem",
+      "name": "LeagueAce",
+      "id": "shape_1476"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "account",
+      "id": "shape_8334"
+    },
+    {
+      "type": "domainStory:actorPerson",
+      "name": "league manager",
+      "id": "shape_0080"
+    },
+    {
+      "type": "domainStory:workObjectEmail",
+      "name": "season",
+      "id": "shape_5338"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_6736",
+      "text": "start date of season, days of week matches played, end date of season, end of season tournament options, min team count, max team count, registration deadline",
+      "number": 201
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_9855",
+      "source": "shape_0080",
+      "target": "shape_8334",
+      "number": 1
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "in",
+      "id": "connection_1685",
+      "source": "shape_8334",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_7858",
+      "source": "shape_0080",
+      "target": "shape_9441",
+      "number": 2
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_9716",
+      "source": "shape_9441",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_3216",
+      "source": "shape_0080",
+      "target": "shape_4919",
+      "number": 3
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_0730",
+      "source": "shape_4919",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "in",
+      "id": "connection_9678",
+      "source": "shape_3089",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "create",
+      "id": "connection_4872",
+      "source": "shape_7710",
+      "target": "shape_3089",
+      "number": 4
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "form",
+      "id": "connection_1485",
+      "source": "shape_7710",
+      "target": "shape_3982",
+      "number": 5
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_9119",
+      "source": "shape_3982",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_3855",
+      "source": "shape_4111",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "promotes",
+      "id": "connection_1444",
+      "source": "shape_1476",
+      "target": "shape_5338",
+      "number": 6
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "to",
+      "id": "connection_9580",
+      "source": "shape_5338",
+      "target": "shape_7710"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "register for",
+      "id": "connection_1764",
+      "source": "shape_2014",
+      "target": "shape_4111",
+      "number": 7
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "closes",
+      "id": "connection_2562",
+      "source": "shape_1476",
+      "target": "shape_0372",
+      "number": 8
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_8871",
+      "source": "shape_0080",
+      "target": "shape_5717",
+      "number": 9
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_0503",
+      "source": "shape_5717",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "posts",
+      "id": "connection_5925",
+      "source": "shape_1476",
+      "target": "shape_1426",
+      "number": 10
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "to",
+      "id": "connection_7774",
+      "source": "shape_1426",
+      "target": "shape_2014"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "check into",
+      "id": "connection_6015",
+      "source": "shape_2014",
+      "target": "shape_4284",
+      "number": 11
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "with",
+      "id": "connection_3023",
+      "source": "shape_4284",
+      "target": "shape_6678"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "play",
+      "id": "connection_0993",
+      "source": "shape_2014",
+      "target": "shape_0349",
+      "number": 12
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "with",
+      "id": "connection_4450",
+      "source": "shape_0349",
+      "target": "shape_2014"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "",
+      "id": "connection_3512",
+      "source": "shape_0372",
+      "target": "shape_6677"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "report",
+      "id": "connection_8399",
+      "source": "shape_2014",
+      "target": "shape_4587",
+      "number": 13
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "",
+      "id": "connection_8264",
+      "source": "shape_4587",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "posts",
+      "id": "connection_2716",
+      "source": "shape_1476",
+      "target": "shape_4763",
+      "number": 14
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "",
+      "id": "connection_0979",
+      "source": "shape_4763",
+      "target": "shape_2014"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_3327",
+      "source": "shape_0080",
+      "target": "shape_4418",
+      "number": 15
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_7048",
+      "source": "shape_4418",
+      "target": "shape_1476"
+    }
+  ]
+}
+
+Here's a breakdown of potential domains within the LeagueAce system, categorized into core, supporting, or generic domains:
+
+Core Domains
+Core domains are the unique capabilities that give the system its competitive advantage and are central to the system's purpose.
+
+League Management: This includes creating leagues, setting up seasons with detailed configurations (dates, team counts, registration deadlines), and managing season progress. It's the heart of the system, directly supporting its primary mission.
+
+Team and Player Management: This involves player account creation, team formation, and registration for seasons. It's crucial for participant engagement and competition organization.
+
+Match Scheduling and Management: Generating and managing match schedules, including venues, times, and participating teams. This domain directly impacts user experience and operational efficiency.
+
+Tournament Management: Creating and managing end-of-season tournaments, including bracket generation and match scheduling. This domain enhances the competitive and entertainment value of the league.
+
+Supporting Domains
+Supporting domains complement the core domains by providing necessary capabilities that enhance the core functionalities but are not the primary focus of the system.
+
+Venue Management: Handling venue information, including availability, scheduling, and check-ins. This domain supports the physical aspect of league matches.
+
+Results Reporting and Standings: Collecting match results, updating standings, and possibly statistical analysis. This domain supports the competitive nature of the leagues by providing transparency and tracking performance.
+
+Generic Domains
+Generic domains are common functionalities that are not unique to the system but are necessary for operation. These can often be handled by off-the-shelf solutions or external services.
+
+Account Management: Basic user account management functions such as registration, authentication, and profile management. This domain is necessary for any system that has user accounts but does not differentiate the system from competitors.
+
+Notification Services: Sending emails or other forms of notifications for promotions, reminders, and updates. While crucial for communication, the underlying technology and processes are common across many systems.
+
+Calendar Integration: Providing users with the ability to integrate schedules with personal or third-party calendar systems. This improves user convenience but is a widely available functionality.
+
+You are a domain driven design bounded context canvas wizard, experienced at breaking down bounded contexts using bounded context canvases using data provided from the discovery phase artifacts like EventStorming sessions, domain storytelling stories, example maps, etc. Your knowledge is both wide and deep. You are also a great communicator, giving very thoughtful and clear advice.
+
+You do so in this format, giving a purpose to the bounded context from the domain driven discovery data, then confirming or proposing a new strategic classification of of the bounded context, then characterizing the behavior of bounded context with domain roles (formerly called model traits), then determine the inbound communication collaborators along with their messages, then pulling out ubiquitous key domain terms that exist within the context and what they mean within the context, then describe key business rules or policies within this context, then determine outbound communication messages and the outbound collaborators they are for, then listing any assumptions that have been made during analysis, then choose metrics that should be gathered to determine if the chosen boundary of the bounded context is a good fit, finally listing any questions that would have been helpful to have answered when analyzing this bounded context:
+
+```
+## Purpose
+$purpose
+
+## Strategic Classification
+$strategic_classification
+
+## Domain Roles
+$domain_roles
+
+## Inbound Communication
+* **Collaborator** - $inbound_collaborator
+  * **Message** - $inbound_collaborator_message
+
+## Ubiquitous Language
+* **$key_term** - $key_term_meaning
+
+## Business Decisions
+* $key_business_rule
+
+## Outbound Communication
+* **Message** - $outbound_collaborator_message
+  * **Collaborator** - $outbound_collaborator
+
+## Assumptions
+* $assumption
+
+## Verification Metrics
+* $verification metric
+
+## Open Questions
+* $helpful_unanswered_question
+```
+
+Each section (Purpose, Strategic Classification, Domain Roles, Inbound Communication, Ubiquitous Language, Business Decisions, Outbound Communication, Assumptions, Verification Metrics, and Open Question) should be incredibly thoughtful, comprising at a minimum, three sentences of thinking.
+
+Create a bounded context canvas for the League Management sub-domain
+

@@ -1,0 +1,449 @@
+You are a domain driven design modeling wizard, with deep expertise in the whole domain driven design toolkit like EventStorming sessions, domain storytelling stories, example maps, etc. Your knowledge is both wide and deep. You are also a great communicator, giving very thoughtful and clear advice.
+Given is a list miro board elements from the EventStorming session that have been translated into a text representation.
+The elements are ordered by time from oldest to newest.
+Each element has a type and color indicated with the tag `[type: $TYPE, color: $COLOR]`.
+Events are characterized by elements with [type: sticky_note, color: orange].
+Actors are characterized by elements with [type: sticky_note, color: yellow].
+Policies are characterized by elements with [type: sticky_note, color: violet].
+Hotspots are characterized by elements with [type: sticky_note, color: pink].
+Systems are characterized by elements with [type: sticky_note, color: black].
+Here is the list of elements:
+[type: sticky_note, color: yellow] League Manager
+[type: sticky_note, color: orange] Start date and season length decided
+[type: sticky_note, color: orange] League Info Mailed to List
+[type: sticky_note, color: orange] League Info Posted On Social Media
+[type: sticky_note, color: yellow] League Manager
+[type: sticky_note, color: yellow] Participating Team
+[type: sticky_note, color: orange] Season Spreadsheet TemplateCreated
+[type: sticky_note, color: orange] Team signed up
+[type: sticky_note, color: yellow] League Manager
+[type: sticky_note, color: orange] Positive Response Participant Added/ Highlighted To Season Sheet
+[type: sticky_note, color: pink] High effort
+[type: sticky_note, color: orange] Response Rate Slowed or Stopped
+[type: sticky_note, color: violet] 34 teams upper limit
+[type: sticky_note, color: violet] Need at least 12 teams to go through with season
+[type: sticky_note, color: orange] Registration Closed
+[type: sticky_note, color: orange] New Excel Spreadsheet with just confirmed players created
+[type: sticky_note, color: black] League Lobster
+[type: sticky_note, color: pink] Tool feels dumb, old internet
+[type: sticky_note, color: orange] Schedule printed from League Lobster
+[type: sticky_note, color: orange] Excel template with team names in alpha order created
+[type: sticky_note, color: orange] Generated matchups master excel file using schedule and team names
+[type: sticky_note, color: orange] Participants emailed weekly matchup
+[type: sticky_note, color: orange] Matchup Tracker updated with week x's color
+[type: sticky_note, color: yellow] Venue Assistant
+[type: sticky_note, color: orange] Players physically matched up from this weeks schedule
+[type: sticky_note, color: yellow] Participating Team
+[type: sticky_note, color: orange] Participants finish 3 games
+[type: sticky_note, color: orange] Participants turned in scoresheet to venue assistant
+[type: sticky_note, color: yellow] League Manager
+[type: sticky_note, color: orange] Scoresheet tallied
+[type: sticky_note, color: orange] Matchup Tracker updated with week x's color
+[type: sticky_note, color: pink] High effort
+[type: sticky_note, color: pink] High effort
+[type: sticky_note, color: orange] Bonus points tallied
+[type: sticky_note, color: orange] Tally entered into confirmed teams spreadsheet
+[type: sticky_note, color: orange] Score spreadsheet PDF generated
+[type: sticky_note, color: pink] High effort
+[type: sticky_note, color: orange] Next week email with matchups and scoresheet pdf
+[type: sticky_note, color: yellow] League Manager
+[type: sticky_note, color: orange] Top 3 teams awarded
+[type: sticky_note, color: yellow] League Manager
+[type: sticky_note, color: black] Print your brackets.com
+[type: sticky_note, color: black] Challonge
+[type: sticky_note, color: orange] Postseason reverse seeded bracket  generated from season scores
+[type: sticky_note, color: yellow] Venue Assistant
+[type: sticky_note, color: orange] Teams matched up
+[type: sticky_note, color: orange] Tourney finished
+[type: sticky_note, color: orange] Tourney prizes awarded
+
+Given are driven design domain storytelling diagrams that have been translated into a json representation
+The elements in the array in the top level "dst" property represent a visual item on the diagram
+Each element has a type property that identifies what visual item that element represents on the diagram and is indicated by the property '"type": "$TYPE'
+Domain storytelling activity elements are characterized by elements with type: domainStory:activity
+Domain storytelling activity elements also have a name property that is the predicate or preposition of the activity
+Domain storytelling activity elements also have an id property that uniquely identifies the activity
+Domain storytelling activity elements also have a source property that is the identity of the work object or actor the activity is sourced from
+Domain storytelling activity elements also have a target property that is the identity of the work object or actor the activity is targeted to
+Domain storytelling activity elements also can have a number property that orders the activities in the story from first (lowest number) to last (highest number)
+Domain storytelling activity elements that do not have a number are prepositions that relate the work objects of an activity to another actor that receives that work item
+Domain storytelling work object elements are characterized by elements with type: domainStory:workObject$description
+The description part of the work object elements type further characterize the type of the work object
+Domain storytelling work object elements also have a name property that is the specific name of the work object
+Domain storytelling work object elements also have an id property that uniquely identifies the work object
+Domain storytelling actor elements are characterized by elements with type: domainStory:actor$description
+The description part of the actor elements type further characterize the type of the actor
+Domain storytelling actor elements also have a name property that is the specific name of the actor
+Domain storytelling actor elements also have an id property that uniquely identifies the actor
+Domain storytelling text annotation elements are characterized by elements with type: domainStory:textAnnotation
+Domain storytelling text annotation elements also have a text property that contains the text of the annotation
+Domain storytelling text annotation elements also have an id property that uniquely identifies the text annotation
+Domain storytelling text annotation elements are connected to other elements by elements with type: domainStory:connection
+Domain storytelling connection elements also have an id property that uniquely identifies the connection
+Domain storytelling connection elements also have a source property that is the identity of the element the text annotation annotates
+Domain storytelling connection elements also have a target property that is the identity of the text annotation element providing the annotation
+
+{
+  "dst": [
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_7259",
+      "source": "shape_9441",
+      "target": "shape_9084"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_9084",
+      "text": "venue, address",
+      "number": 30
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "end of season tournament bracket",
+      "id": "shape_4418"
+    },
+    {
+      "type": "domainStory:workObjectView-List",
+      "name": "league standings",
+      "id": "shape_4763"
+    },
+    {
+      "type": "domainStory:workObjectHow-To-Reg",
+      "name": "match results",
+      "id": "shape_4587"
+    },
+    {
+      "type": "domainStory:workObjectAlarm",
+      "name": "registration deadline",
+      "id": "shape_6677"
+    },
+    {
+      "type": "domainStory:workObjectGrid",
+      "name": "match",
+      "id": "shape_0349"
+    },
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_2913",
+      "source": "shape_4919",
+      "target": "shape_6736"
+    },
+    {
+      "type": "domainStory:workObjectPlace",
+      "name": "venue",
+      "id": "shape_4284"
+    },
+    {
+      "type": "domainStory:actorPerson",
+      "name": "venue assistant",
+      "id": "shape_6678"
+    },
+    {
+      "type": "domainStory:workObjectView-List",
+      "name": "schedule",
+      "id": "shape_1426"
+    },
+    {
+      "type": "domainStory:workObjectCalendar",
+      "name": "schedule",
+      "id": "shape_5717"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "Registrations",
+      "id": "shape_0372"
+    },
+    {
+      "type": "domainStory:actorGroup",
+      "name": "teams",
+      "id": "shape_2014"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "season",
+      "id": "shape_4111"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "team",
+      "id": "shape_3982"
+    },
+    {
+      "type": "domainStory:actorGroup",
+      "name": "players",
+      "id": "shape_7710"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "account",
+      "id": "shape_3089"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "season",
+      "id": "shape_4919"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "league",
+      "id": "shape_9441"
+    },
+    {
+      "type": "domainStory:actorSystem",
+      "name": "LeagueAce",
+      "id": "shape_1476"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "account",
+      "id": "shape_8334"
+    },
+    {
+      "type": "domainStory:actorPerson",
+      "name": "league manager",
+      "id": "shape_0080"
+    },
+    {
+      "type": "domainStory:workObjectEmail",
+      "name": "season",
+      "id": "shape_5338"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_6736",
+      "text": "start date of season, days of week matches played, end date of season, end of season tournament options, min team count, max team count, registration deadline",
+      "number": 201
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_9855",
+      "source": "shape_0080",
+      "target": "shape_8334",
+      "number": 1
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "in",
+      "id": "connection_1685",
+      "source": "shape_8334",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_7858",
+      "source": "shape_0080",
+      "target": "shape_9441",
+      "number": 2
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_9716",
+      "source": "shape_9441",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_3216",
+      "source": "shape_0080",
+      "target": "shape_4919",
+      "number": 3
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_0730",
+      "source": "shape_4919",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "in",
+      "id": "connection_9678",
+      "source": "shape_3089",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "create",
+      "id": "connection_4872",
+      "source": "shape_7710",
+      "target": "shape_3089",
+      "number": 4
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "form",
+      "id": "connection_1485",
+      "source": "shape_7710",
+      "target": "shape_3982",
+      "number": 5
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_9119",
+      "source": "shape_3982",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_3855",
+      "source": "shape_4111",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "promotes",
+      "id": "connection_1444",
+      "source": "shape_1476",
+      "target": "shape_5338",
+      "number": 6
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "to",
+      "id": "connection_9580",
+      "source": "shape_5338",
+      "target": "shape_7710"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "register for",
+      "id": "connection_1764",
+      "source": "shape_2014",
+      "target": "shape_4111",
+      "number": 7
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "closes",
+      "id": "connection_2562",
+      "source": "shape_1476",
+      "target": "shape_0372",
+      "number": 8
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_8871",
+      "source": "shape_0080",
+      "target": "shape_5717",
+      "number": 9
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_0503",
+      "source": "shape_5717",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "posts",
+      "id": "connection_5925",
+      "source": "shape_1476",
+      "target": "shape_1426",
+      "number": 10
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "to",
+      "id": "connection_7774",
+      "source": "shape_1426",
+      "target": "shape_2014"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "check into",
+      "id": "connection_6015",
+      "source": "shape_2014",
+      "target": "shape_4284",
+      "number": 11
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "with",
+      "id": "connection_3023",
+      "source": "shape_4284",
+      "target": "shape_6678"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "play",
+      "id": "connection_0993",
+      "source": "shape_2014",
+      "target": "shape_0349",
+      "number": 12
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "with",
+      "id": "connection_4450",
+      "source": "shape_0349",
+      "target": "shape_2014"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "",
+      "id": "connection_3512",
+      "source": "shape_0372",
+      "target": "shape_6677"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "report",
+      "id": "connection_8399",
+      "source": "shape_2014",
+      "target": "shape_4587",
+      "number": 13
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "",
+      "id": "connection_8264",
+      "source": "shape_4587",
+      "target": "shape_1476"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "posts",
+      "id": "connection_2716",
+      "source": "shape_1476",
+      "target": "shape_4763",
+      "number": 14
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "",
+      "id": "connection_0979",
+      "source": "shape_4763",
+      "target": "shape_2014"
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "creates",
+      "id": "connection_3327",
+      "source": "shape_0080",
+      "target": "shape_4418",
+      "number": 15
+    },
+    {
+      "type": "domainStory:activity",
+      "name": "using",
+      "id": "connection_7048",
+      "source": "shape_4418",
+      "target": "shape_1476"
+    }
+  ]
+}
+
+Using the EventStorming session data and the domain storytelling data, determine key words that should become part of the team's ubiquitous language when we are discussing the domain and coding the requirements. Put these keywords into a dictionary format, in alphabetical order, with a concise definition, and format the output as raw markdown code.
